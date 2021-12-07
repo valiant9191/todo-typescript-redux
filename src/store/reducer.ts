@@ -4,7 +4,7 @@ export interface Todos {
 }
 
 const initialState = {
-    todo:["1",'2','3']
+    todo:["hey store",'2']
 }
 
 type Action = {
