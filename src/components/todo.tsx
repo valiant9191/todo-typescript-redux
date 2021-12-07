@@ -1,15 +1,18 @@
 import React from 'react';
 
 export interface TodosProps {
-    todo: string
+    todo: string,
+    id:string
 }
 
+const TodoTask = ({todo,id}:TodosProps ) => {
 
-const TodoTask = ({todo}:TodosProps) => {
+    const createKey: string = id + Date.now().toString()
 
     return(
-        <li key={todo}>
+        <li key={createKey} id={createKey}>
             {todo}
+            <button style={{borderRadius:'50%'}}>X</button>
         </li>
     )
 }
