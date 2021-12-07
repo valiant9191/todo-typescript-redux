@@ -1,8 +1,7 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { Todos } from './store/reducer';
 
 import TodoList from './components/todoList'
+import InputAddTodo from './components/input/input';
 
 
 const App = () => {
@@ -11,6 +10,8 @@ const App = () => {
   
   return(
     <div className='App'>
+
+      <InputAddTodo />
 
       <TodoList />
 
