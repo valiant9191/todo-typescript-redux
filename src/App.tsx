@@ -1,14 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { Todos } from './store/reducer';
 
 
 const App = () => {
-  console.log('Hello world!')
-
+  
+  const todos=useSelector<Todos, Todos['todo']>((state)=>state.todo)
+  console.log(todos)
+  
   return(
     <div className='App'>
-      <h1>
-        Hello world!
-      </h1>
+      {todos.map(todo=>{
+        return <p key={todo}>{todo}</p>
+      })}
     </div>
   )
 } 
