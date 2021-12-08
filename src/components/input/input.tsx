@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux'
 import { ChangeEvent } from 'hoist-non-react-statics/node_modules/@types/react';
-import { store } from '../../store/store';
+// import { store } from '../../store/store';
 
 
 
@@ -17,16 +17,13 @@ const InputAddTodo = () => {
 
     const addTodoSubmit = () =>{
         dispatch({type:"ADD_TODO", payload:state})
-        setState('')
-        console.log(store.getState())
-
-        
+        setState('')        
     }
 
     return(
         <div>
             <input onChange={inputUpdate} type='text' value={state} name="note" placeholder='write your task/todo'></input>
-            <button onClick={addTodoSubmit}>Add task</button>
+            <button onClick={addTodoSubmit}  type='submit'>Add task</button>
         </div>
     )
 }
