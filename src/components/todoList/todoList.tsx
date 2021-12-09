@@ -1,10 +1,11 @@
 import React from 'react';
 // state 
 import { useSelector, useDispatch } from 'react-redux';
-import { Todos } from '../store/reducer';
-
+import { Todos } from '../../store/reducer';
 // components 
-import TodoTask from './todo';
+import Todo from './todo';
+// style 
+import './todoList.scss'
 
 
 
@@ -18,9 +19,9 @@ const TodoList = () => {
     }
 
     return(
-        <ul> 
+        <ul className='list-todo'> 
            {todos.map((task,id)=>{
-               return <TodoTask todo={task} /*id={task+ Date.now().toString()}*/ key={task+id+ Date.now().toString()} todoDelete={todoDelete}/>
+               return <Todo todo={task} key={task+id+ Date.now().toString()} todoDelete={todoDelete}/>
            })} 
         </ul>
     )

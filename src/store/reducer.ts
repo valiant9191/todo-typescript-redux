@@ -5,13 +5,12 @@ export interface Todos {
 }
 
 const initialState = {
-    todo:[]
+    todo:['hey']
 }
 
 export function reducer(state: Todos=initialState, action:Action){
     switch (action.type) {
         case 'ADD_TODO':{
-            // console.log(state,action)
             return{...state, todo:[...state.todo, action.payload]}
         }    
         case 'DELETE_TODO':{
