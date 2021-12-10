@@ -5,7 +5,7 @@ export interface Todos {
 }
 
 const initialState = {
-    todo:['hey']
+    todo:[]
 }
 
 export function reducer(state: Todos=initialState, action:Action){
